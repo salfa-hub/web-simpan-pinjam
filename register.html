@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi - Salfa Simpan Pinjam</title>
+    <link rel="stylesheet" href="style.css"> <!-- Menautkan CSS -->
+    <script src="script.js" defer></script> <!-- Tautkan ke JavaScript untuk validasi -->
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="abc.png" alt="Salfa.Corp" />
+            <span class="brand-name">SALFA.CORP</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Halaman Registrasi -->
+    <main>
+        <section class="registration-form">
+            <h2>DAFTAR</h2>
+            <form id="registrationForm" onsubmit="return validateRegistrationForm()" method="POST">
+                <label for="full-name">Nama Lengkap:</label>
+                <input type="text" id="full-name" name="full_name" required>
+                <span id="full-name-error" class="error-message"></span>
+            
+                <label for="phone-email">Nomor HP / Email:</label>
+                <input type="text" id="phone-email" name="phone_email" required>
+                <span id="phone-email-error" class="error-message"></span>
+            
+                <label for="address">Alamat:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+                <span id="address-error" class="error-message"></span>
+            
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span id="password-error" class="error-message"></span>
+            
+                <label for="identity-number">No Identitas:</label>
+                <input type="text" id="identity-number" name="identity_number" required>
+                <span id="identity-number-error" class="error-message"></span>
+            
+                <label for="account-number">Nomor Rekening:</label>
+                <input type="text" id="account-number" name="account_number" required>
+                <span id="account-number-error" class="error-message"></span>
+            
+                <label for="bank">Bank:</label>
+                <select id="bank" name="bank" required>
+                    <option value="BRI">BRI</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BSI">BSI</option>
+                    <option value="BNI">BNI</option>
+                    <option value="Permata">Permata</option>
+                    <option value="Seabank">Seabank</option>
+                </select>
+                <span id="bank-error" class="error-message"></span>
+            
+                <button type="submit" class="submit-button">Registrasi</button>
+            </form>
+            
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Salfa Simpan Pinjam. Semua hak dilindungi.</p>
+    </footer>
+
+</body>
+</html>
